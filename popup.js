@@ -35,10 +35,7 @@ const CLIENT_TOOLS = {
 
 
 function init() {
-    const widget = document.querySelector("elevenlabs-convai");
-
-    // Listen for the widget"s "call" event to trigger client-side tools
-    widget
+    document.querySelector("elevenlabs-convai")
         ?.addEventListener("elevenlabs-convai:call", (event) => {
             event.detail.config.clientTools = CLIENT_TOOLS;
         });
