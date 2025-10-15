@@ -1,31 +1,22 @@
-browser.browserAction
-    .setPopupStyles({
-        backgroundColor: "transparent"
-    });
-browser.browserAction.resizePopup(450, 730);
-browser.browserAction.detachPopup();
-browser.browserAction.openPopup();
-
-
 const CLIENT_TOOLS = {
     async take_dom_snapshot() {
         return browser.webfuseSession
             .automation
             .take_dom_snapshot({
-                modifier: "downsample",
+                modifier: "downsample"
             });
     },
 
     async left_click({ selector }) {
         return browser.webfuseSession
             .automation
-            .left_click(selector);
+            .left_click(selector, true);
     },
 
     async type({ text, selector }) {
         return browser.webfuseSession
             .automation
-            .type(text, selector);
+            .type(text, selector, true);
     },
 
     relocate({ url }) {
