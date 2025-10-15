@@ -2,4 +2,31 @@
 
 <a href="https://webfuse.com"><img src="https://img.shields.io/badge/Webfuse-Extension-3b82f6"></a>
 
-This is an [ElevenLabs](https://elevenlabs.io) + [Webfuse](https://www.webfuse.com) voice AI agent extension.
+This is an [ElevenLabs](https://elevenlabs.io) +  [Webfuse](https://www.webfuse.com) voice AI agent extension.
+
+## with ElevenLabs
+
+### 1. Create and configure agent
+
+<a href="https://elevenlabs.io/app/agents">
+  <img src="./.github/el-agents-platform-1.png" width="640">
+</a>
+
+### 2. Create tools for the [Automation API](https://dev.webfuse.com/automation-api)
+
+<a href="https://elevenlabs.io/app/agents">
+  <img src="./.github/el-agents-platform-2.png" width="640">
+</a>
+
+### 3. Align tools with [`popup.agent.js`](./popup.agent.js)
+<a href="https://elevenlabs.io/app/agents">
+  <img src="./.github/el-agents-platform-3.png" width="540">
+</a>
+
+### 4. Update agent ID in [`popup.html`](./popup.html)
+
+## with Webfuse
+
+### 1. Create a Webfuse [Space](https://dev.webfuse.com/spaces-sessions)
+
+### 2. Deploy this [Extension](https://dev.webfuse.com/extensions)
