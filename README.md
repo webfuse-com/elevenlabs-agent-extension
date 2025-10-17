@@ -12,21 +12,32 @@ This is an [ElevenLabs](https://elevenlabs.io) +  [Webfuse](https://www.webfuse.
   <img src="./.github/el-agents-platform-1.png" width="640">
 </a>
 
-### 2. Create tools for the [Automation API](https://dev.webfuse.com/automation-api)
+### 2. Provide agent ID to `env` in [`manifest.json`](./manifest.json)
+
+``` json
+{
+  "env": [
+    {
+      "key": "AGENT_KEY",
+      "value": "agent_0123abcdefghijklomnopqrstuvwxyz"
+    }
+  ]
+}
+```
+
+### 3. Create tools for the [Automation API](https://dev.webfuse.com/automation-api)
 
 <a href="https://elevenlabs.io/app/agents">
   <img src="./.github/el-agents-platform-2.png" width="640">
 </a>
 
-### 3. Align tools with [`popup.agent.js`](./popup.agent.js)
+### 4. Align tools with [`popup.agent.js`](./popup.agent.js)
 <a href="https://elevenlabs.io/app/agents">
   <img src="./.github/el-agents-platform-3.png" width="540">
 </a>
-
-### 4. Update agent ID in [`popup.html`](./popup.html)
 
 ## with Webfuse
 
 ### 1. Create a Webfuse [Space](https://dev.webfuse.com/spaces-sessions)
 
-### 2. Deploy this [Extension](https://dev.webfuse.com/extensions)
+### 2. Deploy this [Extension](https://dev.webfuse.com/extensions) project

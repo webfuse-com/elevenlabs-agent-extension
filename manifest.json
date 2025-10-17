@@ -14,5 +14,11 @@
     ],
     "action": {
         "default_popup": "popup.html"
-    }
+    },
+    "env": [
+        {
+            "key": "AGENT_KEY",
+            "value": "agent_0001k7khc6jfex6bqdn9dm195kq0"
+        }
+    ]
 }

@@ -1,10 +1,16 @@
 const CLIENT_TOOLS = {
     async take_dom_snapshot() {
-        return browser.webfuseSession
+        const fullSnapshot = await browser.webfuseSession
             .automation
-            .take_dom_snapshot({
-                modifier: "downsample"
-            });
+            .take_dom_snapshot();
+
+        return ((fullSnapshot.length / 4) < 2**15)
+            ? fullSnapshot
+            : browser.webfuseSession
+                .automation
+                .take_dom_snapshot({
+                    modifier: "downsample"
+                });
     },
 
     async left_click({ selector }) {
@@ -26,10 +32,13 @@ const CLIENT_TOOLS = {
 
 
 function init() {
-    document.querySelector("elevenlabs-convai")
-        ?.addEventListener("elevenlabs-convai:call", (event) => {
-            event.detail.config.clientTools = CLIENT_TOOLS;
-        });
+    const el = document.createElement("elevenlabs-convai");
+    el.setAttribute("agent-id", browser.webfuseSession.env.AGENT_KEY);
+    document.body.appendChild(el);
+
+    el.addEventListener("elevenlabs-convai:call", (event) => {
+        event.detail.config.clientTools = CLIENT_TOOLS;
+    });
 }
 
 
